@@ -58,7 +58,7 @@ nav a:hover{
 color:white;
 }
 
-/* HERO SLIDESHOW */
+/* HERO */
 .hero{
 height:100vh;
 position:relative;
@@ -111,7 +111,7 @@ animation:float 4s ease-in-out infinite;
 }
 
 .hero-overlay h1{
-font-size:55px;
+font-size:42px; /* slightly reduced */
 color:#b57cff;
 letter-spacing:3px;
 }
@@ -126,7 +126,7 @@ letter-spacing:2px;
 padding:12px 30px;
 margin:10px;
 border:none;
-background:#6a00ff;
+background:#25D366;
 color:white;
 cursor:pointer;
 border-radius:30px;
@@ -135,7 +135,7 @@ transition:0.4s;
 
 .btn:hover{
 background:white;
-color:#6a00ff;
+color:#25D366;
 }
 
 /* SECTION */
@@ -148,6 +148,24 @@ text-align:center;
 font-size:42px;
 margin-bottom:60px;
 color:#b57cff;
+}
+
+/* PRICE IMAGE */
+.price-image-container{
+text-align:center;
+}
+
+.price-image-container img{
+width:100%;
+max-width:900px;
+border-radius:20px;
+box-shadow:0 0 40px #6a00ff;
+transition:0.4s;
+}
+
+.price-image-container img:hover{
+transform:scale(1.02);
+box-shadow:0 0 60px #b57cff;
 }
 
 /* GAMES */
@@ -224,41 +242,20 @@ z-index:999;
 }
 
 .float-buttons a{
-background:#6a00ff;
+background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
 text-align:center;
 font-size:20px;
 text-decoration:none;
-box-shadow:0 0 15px #6a00ff;
+box-shadow:0 0 15px #25D366;
 transition:0.3s;
 }
 
 .float-buttons a:hover{
 transform:scale(1.1);
 background:#b57cff;
-}
-
-/* POPUP */
-.popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.85);
-display:flex;
-justify-content:center;
-align-items:center;
-visibility:hidden;
-}
-
-.popup-content{
-background:#140028;
-padding:40px;
-border-radius:20px;
-text-align:center;
 }
 
 </style>
@@ -269,6 +266,7 @@ text-align:center;
 <nav>
 <img src="logo.jpg" alt="GenZone Logo">
 <div>
+<a href="#prices">Prices</a>
 <a href="#games">Games</a>
 <a href="#gallery">Gallery</a>
 <a href="#contact">Location</a>
@@ -286,49 +284,38 @@ text-align:center;
 <h1>ELITE GAMING EXPERIENCE</h1>
 <p>Power. Performance. Prestige.</p>
 
-<button class="btn" onclick="openPopup()">Book Slot</button>
-<a href="tel:03392154933"><button class="btn">Call Now</button></a>
+<a href="https://wa.me/923392154933?text=Hi%20GENZONE,%20I%20want%20to%20book%20a%20gaming%20slot." target="_blank">
+<button class="btn">BOOK VIA WHATSAPP</button>
+</a>
+
+<a href="tel:03392154933"><button class="btn" style="background:#6a00ff;">CALL NOW</button></a>
 </div>
 </div>
 
-<!-- GAMES SECTION -->
+<!-- PRICE SECTION ADDED -->
+<section id="prices">
+<h2 class="section-title">Our Pricing</h2>
+<div class="price-image-container">
+<img src="pricemenu.jpg" alt="GenZone Price Menu">
+</div>
+</section>
+
+<!-- GAMES SECTION (UNCHANGED) -->
 <section id="games">
 <h2 class="section-title">Games We Offer</h2>
 
 <div class="games">
-
-<div class="game-card">
-<img src="csgo.jpg">
-<h3>Counter Strike Global Offensive</h3>
-</div>
-
-<div class="game-card">
-<img src="valorant.jpg">
-<h3>Valorant</h3>
-</div>
-
-<div class="game-card">
-<img src="gta5.jpg">
-<h3>GTA 5</h3>
-</div>
-
-<div class="game-card">
-<img src="fifa.jpg">
-<h3>FIFA</h3>
-</div>
-
-<div class="game-card">
-<img src="tekken.jpg">
-<h3>Tekken</h3>
-</div>
-
+<div class="game-card"><img src="csgo.jpg"><h3>Counter Strike Global Offensive</h3></div>
+<div class="game-card"><img src="valorant.jpg"><h3>Valorant</h3></div>
+<div class="game-card"><img src="gta5.jpg"><h3>GTA 5</h3></div>
+<div class="game-card"><img src="fifa.jpg"><h3>FIFA</h3></div>
+<div class="game-card"><img src="tekken.jpg"><h3>Tekken</h3></div>
 </div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY (UNCHANGED) -->
 <section id="gallery">
 <h2 class="section-title">Inside GenZone</h2>
-
 <div class="gallery">
 <img src="zone1.jpg">
 <img src="zone2.jpg">
@@ -343,42 +330,21 @@ text-align:center;
 <div class="contact">
 <p>
 Moon Garden, Mezzanine Floor<br>
-Block 10-A, Gulshan<br>
+Block 10-A, Gulshan-e-Iqbal<br>
 Near Madina Blessing Apartment<br><br>
 📞 0339 2154933<br>
 Instagram: @genzonegaming
 </p>
 
-<iframe 
-src="https://www.google.com/maps?q=Gulshan%20Karachi&output=embed">
-</iframe>
-
+<iframe src="https://www.google.com/maps?q=Moon%20Garden%20Gulshan%20Karachi&output=embed"></iframe>
 </div>
 </section>
 
 <!-- FLOAT BUTTONS -->
 <div class="float-buttons">
-<a href="tel:03392154933">📞</a>
+<a href="https://wa.me/923392154933" target="_blank">💬</a>
 <a href="https://instagram.com/genzonegaming" target="_blank">📷</a>
 </div>
-
-<!-- POPUP -->
-<div class="popup" id="popup">
-<div class="popup-content">
-<h2>🔥 Book Your Gaming Slot Now</h2>
-<p>Call us at 0339 2154933</p>
-<button class="btn" onclick="closePopup()">Close</button>
-</div>
-</div>
-
-<script>
-function openPopup(){
-document.getElementById('popup').style.visibility="visible";
-}
-function closePopup(){
-document.getElementById('popup').style.visibility="hidden";
-}
-</script>
 
 </body>
 </html>
